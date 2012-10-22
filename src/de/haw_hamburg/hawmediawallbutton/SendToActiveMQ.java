@@ -2,12 +2,15 @@ package de.haw_hamburg.hawmediawallbutton;
 
 import java.io.IOException;
 
+import com.google.gson.Gson;
+
 import de.haw.publisher.AndroidPublisher;
 
 
 public class SendToActiveMQ {
 	String url = "10.0.2.2",message = "blabla" ,queue = "test";
 	int port = 12349;
+	Gson g;
 	public SendToActiveMQ() {
 		new Thread(new Runnable() {
 			
